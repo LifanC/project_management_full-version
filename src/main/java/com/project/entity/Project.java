@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "project")
-public class Project {
+public class Project{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -28,6 +28,7 @@ public class Project {
 	public Project() {}
 	public Project(String number, String name, Integer count, Integer price, String day, String text,
 			String buyday, String sellday) {
+		super();
 		this.number = number;
 		this.name = name;
 		this.count = count;

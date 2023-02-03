@@ -18,7 +18,6 @@
 						<div class="btn-group">
 			    			<button class="btn btn-outline-primary" onclick="openhome('home')">首頁</button>
     						<button class="btn btn-outline-primary" onclick="openhome('findonly')">個別查詢</button>
-    						<button class="btn btn-outline-primary" onclick="myFunction()">廠商</button>
     					</div>
 					</th>
 					<th>
@@ -29,6 +28,7 @@
 				<th>
 				<div id="home" class="page">
 					<div><h4>新增產品資料</h4></div>
+					
 					<div class="form-floating mb-3">
 						<input class="form-control" type="text" ng-model="form.number" placeholder="產品編號" size="10%">
 						<label>產品編號</label>
@@ -78,13 +78,12 @@
 				</th>
 				<td>
 					<!-- table -->
-					<div>
+					<div class="table-responsive">
 						<table class="table table-bordered">
 							<thead class="table-light">
 								<tr>
 									<th>修改 / 刪除 / 補貨 / 賣出 功能</th>
 									<th ng-click="orderByMe('day')">新增產品日期</th>
-									<th ng-click="orderByMe('$index+1')">排序編號</th>
 									<th ng-click="orderByMe('number')">產品編號</th>
 									<th ng-click="orderByMe('name')">產品名稱</th>
 									<th>規格</th>
@@ -92,7 +91,7 @@
 									<th colspan="2" ng-click="orderByMe('price')">產品價格</th>
 									<th colspan="2" ng-click="orderByMe('totalprice')">總金額</th>
 									<th ng-click="orderByMe('buyday')">補貨時間</th>
-									<th ng-click="orderByMe('sellday')">賣出時間</th>
+									<th ng-click="orderByMe('sellday')">賣出時間</th>							
 								</tr>
 							</thead>
 							<tbody>
@@ -104,7 +103,6 @@
 									<button class="btn btn-primary" ng-click="sell(x)">賣出</button>
 								</td>
 								<td>{{x.day}}</td>
-								<td>{{$index+1}}</td>
 								<td>{{x.number}}</td>
 								<td>{{x.name}}</td>
 								<td style="width:150px">{{x.text}}</td>

@@ -22,7 +22,7 @@
 					<h4>查詢廠商資料</h4>
 					<div>
 						<label>統一編號</label>
-						<input type="text">
+						<input type="text" ng-model="ffname">
 					</div>
 				</th>
 			</tr>
@@ -43,13 +43,15 @@
 					<h4>新增廠商資料</h4>
 					<div>
 						<label>廠商名稱</label>
-						<input type="text" ng-model="form.fnumber">
+						<input type="text" ng-model="fname">
 						<p></p>
 						<label>統一編號</label>
-						<input type="text">
+						<input type="text" ng-model="factorynumber">
 						<p></p>
 						<label>產品編號</label>
-						<input type="text">
+						<input type="text" ng-model="fnumber">
+						<p></p>
+						<button class="btn btn-primary" ng-click="btn()" type="button">送出</button>
 					</div>
 				</th>
 				<th>
@@ -79,7 +81,9 @@
 			$interval(function () {
 				$scope.thedaytime = new Date().toLocaleString();
 			}, 1000);
-
+			$scope.btn =()=>{
+				
+			}
 
 
 

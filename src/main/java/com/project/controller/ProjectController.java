@@ -31,7 +31,7 @@ public class ProjectController {
 	public void save(Project project) {
 		List<Project> data = porjectRepository.queryByNumber(project.getNumber());
 		if(data.size() == 0) {
-			porjectRepository.save(project);			
+			porjectRepository.save(project);
 		}else if(data.size() >= 1) {
 			data.forEach(e->{
 					try {
